@@ -24,8 +24,10 @@ Event options:
 Asynchonous operation : 
 Main program ( or Promise caller ) can have many Promises(asynchonous) wich triggering statement without locking process in main programming. Main not waiting when Promise is done. Just continue working and will be informed, if Promise success or fail. Synchronize operation wait untill process is completed to continue program. When Promise is done inform about it automatically to main or process who called it.
 
-
 Promise can have function inside it. Function will run if Promise success, if fail, then other one function can be completed.
+
+Asynchronous programming link
+http://www.i-programmer.info/programming/theory/6040-what-is-asynchronous-programming.html
 
 ==============================================
 
@@ -42,6 +44,9 @@ fetch(host + link, postData)
 ==============================================
 
 Hemmo-backend use Bluebird-promise with knex-query (NodeJS + Postgresql)
+
+(search bluebird)
+https://gist.github.com/isaacs/76df78e3f67dcb58e27d#gistcomment-1688635
 
 ==============================================
 
