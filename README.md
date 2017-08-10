@@ -18,13 +18,13 @@ Event options:
 4. Promise
    -> Asynchronous operation
    -> "bluebird"-promise working with knex on hemmo-backend
+   -> standart Promise test on normal Javascript (for Promise beginers)
+      like : https://scotch.io/tutorials/javascript-promises-for-dummies 
+       and other materials ...	
 
 ==============================================
 
-Asynchonous operation : 
-Main program ( or Promise caller ) can have many Promises(asynchonous) wich triggering statement without locking process in main programming. Main not waiting when Promise is done. Just continue working and will be informed, if Promise success or fail. Synchronize operation wait untill process is completed to continue program. When Promise is done inform about it automatically to main or process who called it.
-
-Promise can have function inside it. Function will run if Promise success, if fail, then other one function can be completed.
+Promise can have function inside it. This function getting two functions inside it resolve and rejected. Resolve function happen when Promise success and reject when fail.
 
 Asynchronous programming link
 http://www.i-programmer.info/programming/theory/6040-what-is-asynchronous-programming.html
@@ -47,6 +47,14 @@ Hemmo-backend use Bluebird-promise with knex-query (NodeJS + Postgresql)
 
 (search bluebird)
 https://gist.github.com/isaacs/76df78e3f67dcb58e27d#gistcomment-1688635
+
+Also bluebird is used at NodeJS other implementation for example check if server connection success or fail.
+
+hemmo-backend/src/backend_kit.js (modified file look like this)
+
+
+
+
 
 ==============================================
 
