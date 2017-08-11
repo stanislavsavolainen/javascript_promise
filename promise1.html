@@ -1,0 +1,65 @@
+<script type="text/javascript">
+	//document.write("Hello");
+	/* ES5, using Bluebird */
+var isMomHappy = false;
+
+// Promise
+var willIGetNewPhone = new Promise(
+    function (resolve, reject) {
+        if (isMomHappy) {
+            var phone = {
+                brand: 'Samsung',
+                color: 'black'
+            };
+		
+	    // document.getElementById("data").innerHTML = "1111";//phone;	
+            resolve(phone);
+	   
+	   		
+        } else {
+            var reason = new Error('mom is not happy');
+            
+	 //document.getElementById("data").innerHTML = "000"; //reason;
+	reject(reason);
+	     	
+        }
+
+    }
+);
+
+
+// call our promise
+var askMom = function () {
+
+	console.log("function with promise");
+
+    willIGetNewPhone
+        .then(function (fulfilled) {
+            // yay, you got a new phone
+            console.log(fulfilled);
+	   // document.getElementById("data").innerHTML = "OK";	
+	   document.getElementById("data").innerHTML =  JSON.stringify(fulfilled);	
+        })
+        .catch(function (error) {
+            // ops, mom don't buy it
+            console.log(error.message);
+	    //document.getElementById("data").innerHTML = "FAIL";
+	     document.getElementById("data").innerHTML = error.message;	
+        });
+}
+
+//askMom();
+
+
+
+
+
+</script>
+
+<html>
+<title></title>
+<body>
+<button onClick="askMom()"> Press promise button </button>
+<p id="data">1234</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<script type="text/javascript">
+
+  setTimeout(() => {
+    console.log("hello")
+    setTimeout(() => {
+      console.log("world")
+      setTimeout(() => {
+        console.log("1")
+        setTimeout(() => {
+          console.log("2")
+        }, 1000)
+      }, 1000)
+    }, 1000)
+  }, 1000)
+
+  console.log("zxcvbnm")
+
+  const setTimeoutPromise = function (text) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log(text)
+        resolve()
+      }, 1000)
+    })
+     
+  }
+    /*
+     char16_t  0xA8AB, 0x   16 bit -> 0x0000 -> 0xFFFF  ½
+
+  
+
+
+  short a = 0xff00
+  short b = 0xaa00
+  short c = 0xcc00
+
+  short msg[] = { a, b, c }
+
+  0x0000ff000000aa000000cc00
+ */
+  
+     
+
+
+/*
+  setTimeoutPromise("hello")
+    .then(() => setTimeoutPromise("world"))
+    .then(() => setTimeoutPromise("1"))
+    .then(() => setTimeoutPromise("2"))
+    .then(() => setTimeoutPromise("3"))
+
+    console.log("zxcvbnm")
+*/
+
+	//document.write("Hello");
+
+</script>
+
+<html>
+<title></title>
+
+<body>
+</body>
+
+</html>
